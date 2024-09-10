@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Example</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            color: black;
+            margin: 0px 20%;
+        }
+
+        #kleur {
+            color: #5271ff;
+        }
+
+        #starten {
+            background-color: #5271ff;
+        }
+
+        /* Left and Right Alignment */
+        .navbar-left {
+            flex: 1;
+        }
+
+        .navbar-right {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Navbar Item Styles */
+        .navbar a {
+            color: black;
+            text-decoration: none;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #3b5edb;
+            border-radius: 5px;
+        }
+
+        .balkie {
+            background-color: #5271ff;
+            height: 20px;
+            width: 100%;
+        }
+
+        .header {
+            position: relative;
+            /* Relative to contain the absolute positioned boksje */
+        }
+
+        .header img {
+            width: 100%;
+            max-height: 75vh;
+            object-fit: cover;
+        }
+
+        /* The boksje (box) on top of the image */
+        .boksje {
+            position: absolute;
+            top: 50%;
+            /* Verticaal in het midden */
+            right: 20%;
+            /* 20px van de rechterkant */
+            transform: translateY(-50%);
+            /* Verticaal gecentreerd */
+            background-color: white;
+            /* Semi-transparante witte achtergrond */
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            text-align: left;
+        }
+
+        .boksje * {
+            margin: 10px 0px;
+        }
+
+        .boksje h1 {
+            font-size: 40px;
+        }
+
+        #startButton {
+            width: 100%;
+            text-align: left;
+            padding: 15px 20px;
+            font-weight: bold;
+
+        }
+
+        .boksje button {
+            background-color: #5271ff;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .boksje button:hover {
+            background-color: #3b5edb;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <!-- Left Side Item -->
+        <div class="navbar-left">
+            <h1 id="logo"><span id="kleur">Stem</span>wijzer</h1>
+        </div>
+
+        <!-- Right Side Items -->
+        <div class="navbar-right">
+            <a id="over" href="#">Over stemwijzer</a>
+            <a id="starten" href="#">Starten</a>
+        </div>
+    </nav>
+
+    <div class="balkie"></div>
+
+    <div class="header">
+        <img id="headerimg" src="img/tweedekamer.jpg" alt="Tweedekamer">
+        <!-- Boksje with a button -->
+        <div class="boksje">
+            <h1>Europees Parlemens- <br> verkiezing 6 juni 2024</h1>
+            <p>Test je politieke voorkeur aan de hand van 30 stellingen.</p>
+            <button id="startButton" onclick="startStemWijzer()">Start</button>
+        </div>
+    </div>
+
+    <script>
+        function startStemWijzer() {
+            alert('Stemwijzer gestart!');
+        }
+    </script>
+
+</body>
+
+</html>
